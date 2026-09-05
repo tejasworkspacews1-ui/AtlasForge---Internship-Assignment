@@ -11,7 +11,7 @@
  * news, jobs, and startup data from public APIs (arXiv, RSS feeds, RemoteOK, etc.)
  * with zero fabrication and zero cost. All data is freely accessible public data.
  */
-const BASE = "/api";
+const BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
 
 async function http<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {

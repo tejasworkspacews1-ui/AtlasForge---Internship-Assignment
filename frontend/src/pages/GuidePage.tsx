@@ -16,6 +16,7 @@ import {
   BookOpen, Shield, Globe, Zap, Database, RefreshCw,
   FileText, Briefcase, Newspaper, Building2, Cpu,
   HelpCircle, ExternalLink, Github, Heart, Lock,
+  GitMerge, Download,
 } from "lucide-react";
 import Panel from "../components/Panel";
 
@@ -377,7 +378,7 @@ export default function GuidePage() {
         ))}
       </div>
 
-      <Panel title={sections.find((s) => s.id === activeSection)?.title} subtitle="AtlasForge Documentation">
+      <Panel title={sections.find((s) => s.id === activeSection)?.title ?? "Guide"} subtitle="AtlasForge Documentation">
         {sections.find((s) => s.id === activeSection)?.content}
       </Panel>
     </div>
