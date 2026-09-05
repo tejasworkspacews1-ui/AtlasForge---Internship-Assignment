@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root { color-scheme: dark; }
+
+html, body, #root {
+  height: 100%;
+  background: #05070d;
+  color: #e5e7eb;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(167,139,250,0.08), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(34,211,238,0.08), transparent 40%);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0a0e18; }
+::-webkit-scrollbar-thumb { background: #1c2440; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3458; }
+
+@layer components {
+  .glass { @apply bg-obsidian-700/60 backdrop-blur-xl border border-white/5 shadow-glass; }
+  .glass-hover { @apply transition-all hover:border-accent-cyan/30 hover:shadow-glow; }
+  .panel-title { @apply text-xs font-semibold uppercase tracking-[0.2em] text-slate-400; }
+  .metric-label { @apply text-[11px] uppercase tracking-wider text-slate-500 font-medium; }
+}

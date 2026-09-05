@@ -1,0 +1,16 @@
+id,kind,canonical,confidence,alias_count
+12,company,Crusoe,1.0,0
+6,company,Gemini Spark,1.0,0
+5,company,Google,1.0,0
+7,company,Google Photos,1.0,0
+13,company,Jane Street,1.0,0
+1,company,John Ternus,1.0,0
+4,company,Nvidia,1.0,0
+3,company,OpenAI,1.0,0
+10,company,Side Event,1.0,0
+9,company,"Side Event
+
+Less",1.0,0
+11,company,Silicon Valley,1.0,0
+2,company,Tim Cook,1.0,0
+8,company,Ultra,1.0,0
