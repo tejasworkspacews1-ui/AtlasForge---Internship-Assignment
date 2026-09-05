@@ -9,7 +9,7 @@ GitHub: https://github.com/tejasworkspacews1-ui
 
 AtlasForge is a real-time intelligence dashboard that aggregates research papers,
 news, jobs, and startup data from public APIs (arXiv, RSS feeds, RemoteOK, etc.)
-with zero fabrication and zero cost. All data is Legal & freely accessible public data.
+with zero fabrication and zero cost. All data is legal & freely accessible public data.
 -->
 # AtlasForge — AI Intelligence Graph
 
