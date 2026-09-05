@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: atlasforge-backend
+    runtime: python-3.12
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    workingDirectory: backend
+    envVars:
+      - key: ATLAS_DB_URL
+        value: sqlite+aiosqlite:///data/atlas.db
+      - key: ATLAS_HOST
+        value: 0.0.0.0
+      - key: ATLAS_PORT
+        value: 8000
+    plan: free
