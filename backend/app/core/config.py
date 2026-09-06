@@ -27,9 +27,13 @@ class Settings:
     api_host: str = os.getenv("ATLAS_HOST", "0.0.0.0")
     api_port: int = int(os.getenv("ATLAS_PORT", "8000"))
     database_url: str = os.getenv("ATLAS_DB_URL", f"sqlite+aiosqlite:///{DATA_DIR}/atlas.db")
-    cors_origins: tuple[str, ...] = (
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
+    cors_origins: tuple[str, ...] = tuple(
+        o.strip()
+        for o in os.getenv(
+            "ATLAS_CORS_ORIGINS",
+            "http://localhost:5173,http://127.0.0.1:5173,https://atlasforgesmartresources.vercel.app,https://atlasforge-smartresources.onrender.com",
+        ).split(",")
+        if o.strip()
     )
     log_level: str = os.getenv("ATLAS_LOG_LEVEL", "INFO")
     user_agent: str = os.getenv(
