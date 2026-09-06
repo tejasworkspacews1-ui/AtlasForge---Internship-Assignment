@@ -11,7 +11,6 @@ AtlasForge is a real-time intelligence dashboard that aggregates research papers
 news, jobs, and startup data from public APIs (arXiv, RSS feeds, RemoteOK, etc.)
 with zero fabrication and zero cost. All data is freely accessible public data.
 """
-"""FastAPI application factory."""
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
