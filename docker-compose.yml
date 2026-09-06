@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+    environment:
+      - ATLAS_DB_URL=sqlite+aiosqlite:///data/atlas.db
+      - ATLAS_HOST=0.0.0.0
+      - ATLAS_PORT=8000
+    restart: unless-stopped
