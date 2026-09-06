@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-WORKDIR /app
+WORKDIR /app/backend
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
@@ -10,7 +10,7 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-COPY backend/ ./backend/
+COPY backend/ .
 
 ENV ATLAS_DB_URL=sqlite+aiosqlite:///data/atlas.db
 ENV ATLAS_HOST=0.0.0.0
