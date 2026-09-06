@@ -18,7 +18,10 @@ Usage:
 from __future__ import annotations
 
 import asyncio
+import os
 import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from app.db.session import init_db, session_scope
 from app.services.ingestors.dispatcher import AVAILABLE, run_ingestor
